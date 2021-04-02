@@ -19,10 +19,10 @@ import springfox.documentation.swagger.web.SwaggerResource
 @Configuration
 class CsmApiConfiguration {
 
-  @Value("\${azure.cosmosdb.serviceEndpoint}")
+  @Value("\${csm.azure.cosmosdb.serviceEndpoint}")
   private lateinit var azureCosmosServiceEndpoint: String
 
-  @Value("\${azure.cosmosdb.key}") private lateinit var azureCosmosKey: String
+  @Value("\${csm.azure.cosmosdb.key}") private lateinit var azureCosmosKey: String
 
   @Bean
   fun cosmosClientBuilder(): CosmosClientBuilder =
