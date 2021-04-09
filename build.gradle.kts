@@ -95,7 +95,7 @@ subprojects {
     implementation("io.springfox:springfox-boot-starter:${springfoxVersion}")
     implementation("io.springfox:springfox-swagger-ui:${springfoxVersion}")
 
-    implementation("com.azure:azure-cosmos:4.13.1")
+    implementation("com.azure.spring:azure-spring-boot-starter-cosmos:3.3.0")
     // Issue with SpringBoot 2.4.4 and Azure Cosmos 4.13.1, because of reactor-core 3.4.4
     // cf. https://github.com/Azure/azure-sdk-for-java/issues/20106
     // Workaround: force reactor-core to 3.4.3
