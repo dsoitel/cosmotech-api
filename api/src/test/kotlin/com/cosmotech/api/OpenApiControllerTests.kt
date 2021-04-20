@@ -12,6 +12,7 @@ import org.springframework.boot.test.web.client.TestRestTemplate
 import org.springframework.boot.web.server.LocalServerPort
 import org.springframework.core.io.ClassPathResource
 import org.springframework.http.HttpStatus
+import org.springframework.test.context.ActiveProfiles
 
 abstract class OpenApiControllerTestBase {
 
@@ -66,6 +67,7 @@ abstract class OpenApiControllerTestBase {
   }
 }
 
+@ActiveProfiles(profiles = ["test"])
 @SpringBootTest(
     webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
     properties = ["server.servlet.context-path="])
@@ -82,6 +84,7 @@ class OpenApiControllerBaseContextPathTests : OpenApiControllerTestBase() {
   }
 }
 
+@ActiveProfiles(profiles = ["test"])
 @SpringBootTest(
     webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
     properties = ["server.servlet.context-path=/vMAJOR"])
